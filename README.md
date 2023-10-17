@@ -4,7 +4,7 @@
 
 ### Details
 
-The extension generates bespoke shades from a selected color to be used in TailwindCSS.
+This [VSC](https://vscodium.com) extension generates bespoke shades from a selected color to be used in TailwindCSS.
 
 > [!NOTE]<br>This VSC extension has been **reworked** from [this](https://github.com/bourhaouta/vscode-tailwindshades/) original repository.
 
