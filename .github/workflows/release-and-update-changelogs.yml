@@ -1,13 +1,13 @@
-name: Create Release, Auto Merge, and Update Changelog
+name: Create Release, Auto Merge, Update Changelog, and Attach VSIX
 
 on:
   push:
     tags:
-      - 'v*.*.*'  # ? This will match tags like v2.0.1, v1.2.3, etc.
+      - 'v*.*.*'  # This will match tags like v2.0.1, v1.2.3, etc.
 
 jobs:
   process:
-    if: github.actor == 'GoodM4ven'  # ! Hard-coded username
+    if: github.actor == 'GoodM4ven'  # Hard-coded username
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
@@ -50,3 +50,33 @@ jobs:
         branch: main
         commit_message: Update CHANGELOG
         file_pattern: CHANGELOG.md
+
+    - name: Set up Node.js (Latest Version)
+      uses: actions/setup-node@v3
+      with:
+        node-version: 'latest'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Extract version from tag
+      id: extract_version
+      run: |
+        VERSION=${{ github.ref_name }}
+        echo "Extracted version: $VERSION"
+        echo "::set-output name=version::$VERSION"
+
+    - name: Generate VSIX package
+      run: |
+        npm install -g vsce
+        vsce package -o goodm4ven.tailwindcss-shades-generator-${{ steps.extract_version.outputs.version }}.vsix
+
+    - name: Upload VSIX package to GitHub Release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./goodm4ven.tailwindcss-shades-generator-${{ steps.extract_version.outputs.version }}.vsix
+        asset_name: goodm4ven.tailwindcss-shades-generator-${{ steps.extract_version.outputs.version }}.vsix
+        asset_content_type: application/octet-stream
