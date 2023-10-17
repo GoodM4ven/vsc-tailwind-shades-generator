@@ -2,6 +2,13 @@
 
 All notable changes to `vsc-tailwind-shades-generator` will be documented in this file.
 
+## v1.0.9 - 2023-10-17
+
+v1.0.9
+
+- Updated the icon image crop, quality and scale
+- Updated [README.md]
+
 ## v1.0.8 - 2023-10-17
 
 v1.0.8
