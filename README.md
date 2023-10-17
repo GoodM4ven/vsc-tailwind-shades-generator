@@ -20,3 +20,5 @@ This [VSC](https://vscodium.com) extension generates bespoke shades from a selec
     "title": "Generate TailwindCSS Color Shades (CSS Variables)"
 }
 ```
+
+https://github.com/GoodM4ven/vsc-tailwind-shades-generator/assets/121377476/48540e85-c678-42a6-9807-6a62b4c40dfc
