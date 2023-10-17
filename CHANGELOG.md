@@ -2,6 +2,13 @@
 
 All notable changes to `vsc-tailwind-shades-generator` will be documented in this file.
 
+## v1.0.3 - 2023-10-17
+
+v1.0.3
+
+- Updated the extension (package) version
+- Trying to update the CI workflow to upload a release directly
+
 ## v1.0.2 - 2023-10-17
 
 v1.0.2
