@@ -1,0 +1,52 @@
+{
+    "name": "vsc-tailwind-shades-generator",
+    "displayName": "TailwindCSS Shades Generator",
+    "description": "A VSC extension to generate bespoke TailwindCSS shades based on a given color.",
+    "keywords": [
+        "tailwindcss",
+        "color",
+        "shades",
+        "generator",
+        "vsc",
+        "extension"
+    ],
+    "version": "1.0.0",
+    "publisher": "GoodM4ven",
+    "author": "GoodM4ven<GoodM4ven@proton.me>",
+    "homepage": "https://github.com/GoodM4ven/vsc-tailwind-shades-generator",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/GoodM4ven/vsc-tailwind-shades-generator.git"
+    },
+    "bugs": {
+        "url": "https://github.com/GoodM4ven/vsc-tailwind-shades-generator/issues"
+    },
+    "categories": [
+        "Other"
+    ],
+    "galleryBanner": {
+        "color": "#14b8a6"
+    },
+    "icon": "images/icon.png",
+    "engines": {
+        "vscode": "^1.83.0"
+    },
+    "activationEvents": [],
+    "main": "./src/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "vsc-tailwind-shades-generator.generateColorShadesAsJson",
+                "title": "Generate TailwindCSS Color Shades (JSON)"
+            },
+            {
+                "command": "vsc-tailwind-shades-generator.generateColorShadesAsCssVariables",
+                "title": "Generate TailwindCSS Color Shades (CSS Variables)"
+            }
+        ]
+    },
+    "dependencies": {
+        "hex-to-color-name": "^1.0.1",
+        "values.js": "^2.1.1"
+    }
+}
