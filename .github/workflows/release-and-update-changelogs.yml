@@ -1,4 +1,4 @@
-name: Create Release, Auto Merge, Update Changelog, and Attach VSIX
+name: Create Release, Auto Merge, Update Changelog, Attach VSIX, and Publish To OpenVSX
 
 on:
   push:
@@ -80,3 +80,8 @@ jobs:
         asset_path: ./goodm4ven.tailwindcss-shades-generator-${{ steps.extract_version.outputs.version }}.vsix
         asset_name: goodm4ven.tailwindcss-shades-generator-${{ steps.extract_version.outputs.version }}.vsix
         asset_content_type: application/octet-stream
+
+    - name: Publish to Open VSX Registry
+      uses: HaaLeo/publish-vscode-extension@v1
+      with:
+        pat: ${{ secrets.OPEN_VSX_TOKEN }}
