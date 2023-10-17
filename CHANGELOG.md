@@ -2,6 +2,12 @@
 
 All notable changes to `vsc-tailwind-shades-generator` will be documented in this file.
 
+## v1.0.4 - 2023-10-17
+
+v1.0.4
+
+Added a CI step to upload to OpenVSX upon release
+
 ## v1.0.3 - 2023-10-17
 
 v1.0.3
