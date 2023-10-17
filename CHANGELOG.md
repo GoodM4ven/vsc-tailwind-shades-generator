@@ -7,3 +7,18 @@ All notable changes to `vsc-tailwind-shades-generator` will be documented in thi
 v1.0.2
 
 Fixing Github actions
+
+## v1.0.1 - 2023-10-17
+
+v1.0.1
+
+Updated the gallery banner's color
+
+## v1.0.0 - 2023-10-17
+
+v1.0.0
+
+- Reworked the original extension
+- Fixed the indentation issues
+- Added a cool extension icon!
+- Maintained the abilities to generate shades as JSON or CSS variables
