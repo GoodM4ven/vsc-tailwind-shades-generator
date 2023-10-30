@@ -52,7 +52,7 @@ jobs:
         file_pattern: CHANGELOG.md
 
     - name: Set up Node.js (Latest Version)
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: 'latest'
 
